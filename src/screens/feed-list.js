@@ -21,19 +21,19 @@ export default class FeedsList extends React.Component {
     const { feeds } = this.props.screenProps.store;
     return (
       <Container>
-          <Content>
-              <List>
-                  {
-                    feeds && feeds.map((f, i) => {
-                      return (
-                        <ListItem key={i} onPress={() => this.handleFeedPress(f)}>
-                          <Text>{f.title}</Text>
-                        </ListItem>
-                      );
-                    })
-                  }
-              </List>
-          </Content>
+        <Content>
+          <List>
+            {
+              feeds && feeds.map((f, i) => {
+                return (
+                  <ListItem key={i} onPress={() => this.handleFeedPress(f)}>
+                    <Text>{f.title}</Text>
+                  </ListItem>
+                );
+              })
+            }
+          </List>
+        </Content>
       </Container>
     );
   }
