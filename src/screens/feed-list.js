@@ -4,15 +4,15 @@ import { observer } from 'mobx-react/native';
 import { selectFeed } from '../actions';
 
 @observer
-export default class FeedsList extends React.Component {
+export default class FeedList extends React.Component {
   static navigationOptions = (props) => ({
     title: 'My Feeds',
-    headerRight: <Button transparentonPress={ () => props.navigation.navigate('AddFeed') }>
+    headerRight: <Button transparent onPress={() => props.navigation.navigate('AddFeed')}>
                    <Icon name="add"/>
                  </Button>
   })
 
-  handleFeedPress(feed) {
+  handleFeedPress = (feed) => {
     selectFeed(feed);
     this.props.navigation.navigate('FeedDetail', { feedUrl: feed.url });
   }

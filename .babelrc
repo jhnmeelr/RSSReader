@@ -1,7 +1,7 @@
 {
   "presets": ["react-native"],
   "plugins": [
-    "transform-decorator-legacy",
+    "transform-decorators-legacy",
     "transform-object-rest-spread"
   ]
 }
